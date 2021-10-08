@@ -56,6 +56,11 @@
 		7C9675EF27109D17005E99A9 /* iOS-VIPER-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				7C96760927109D55005E99A9 /* Router */,
+				7C96760727109D4B005E99A9 /* Entities */,
+				7C96760627109D44005E99A9 /* Presenters */,
+				7C96760527109D37005E99A9 /* Interactors */,
+				7C96760427109D2D005E99A9 /* Views */,
 				7C9675F027109D17005E99A9 /* AppDelegate.swift */,
 				7C9675F227109D17005E99A9 /* SceneDelegate.swift */,
 				7C9675F427109D17005E99A9 /* ViewController.swift */,
@@ -65,6 +70,41 @@
 				7C9675FE27109D18005E99A9 /* Info.plist */,
 			);
 			path = "iOS-VIPER-Demo";
+			sourceTree = "<group>";
+		};
+		7C96760427109D2D005E99A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7C96760527109D37005E99A9 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		7C96760627109D44005E99A9 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		7C96760727109D4B005E99A9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7C96760927109D55005E99A9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
