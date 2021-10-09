@@ -8,6 +8,7 @@
 import Foundation
 
 struct Constants {
-    static let bookCellID = "BookCell"
-    static let booksVCID = "BooksViewController"
+    static let newsCellID = "NewsCell"
+    static let newsVCID = "NewsViewController"
+    static let apiKey = "a015f650988d4b60abd9ccdbfcf03686"
 }

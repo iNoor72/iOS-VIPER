@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -18,7 +18,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func setTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: Constants.bookCellID, bundle: nil), forCellReuseIdentifier: Constants.bookCellID)
+        tableView.register(UINib(nibName: Constants.newsCellID, bundle: nil), forCellReuseIdentifier: Constants.newsCellID)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,7 +26,7 @@ class BooksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.bookCellID, for: indexPath) as! BookCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.newsCellID, for: indexPath) as! NewsCell
         return cell
     }
     

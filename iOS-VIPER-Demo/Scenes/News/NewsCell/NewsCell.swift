@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookCell: UITableViewCell {
+class NewsCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
