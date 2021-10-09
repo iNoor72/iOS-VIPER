@@ -6,3 +6,25 @@
 //
 
 import Foundation
+
+protocol NewsPresetnerProtocol {
+    var view: NewsViewProtocol? { get set }
+    
+}
+
+protocol NewsRouterProtocol {
+    
+}
+
+protocol NewsViewProtocol: AnyObject {
+    var presenter: NewsPresetnerProtocol? { get set }
+}
+
+
+protocol NewsInteractorInputProtocol {
+    var presenter: NewsPresetnerProtocol? { get set }
+}
+
+protocol NewsInteractorOutputProtocol {
+    
+}

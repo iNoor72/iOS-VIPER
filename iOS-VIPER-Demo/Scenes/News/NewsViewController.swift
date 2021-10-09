@@ -7,7 +7,9 @@
 
 import UIKit
 
-class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NewsViewProtocol {
+    var presenter: NewsPresetnerProtocol?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
