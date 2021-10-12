@@ -13,5 +13,6 @@ class NewsInteractor: NewsInteractorInputProtocol {
     func fetchNewsData(){
         NetworkService.shared.fetchData()
 //        presenter?.news = data
+        
     }
 }
