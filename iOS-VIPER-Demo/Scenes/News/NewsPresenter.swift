@@ -7,7 +7,9 @@
 
 import Foundation
 
-class BooksPresenter: NewsPresetnerProtocol {
+class NewsPresenter: NewsPresetnerProtocol {
+    
+    var news : News?
     
     weak var view: NewsViewProtocol?
     private let router: NewsRouterProtocol
@@ -17,6 +19,12 @@ class BooksPresenter: NewsPresetnerProtocol {
         self.view = view
         self.router = router
         self.interactor = interactor
+    }
+    
+    func fetchNewsData() {
+        view?.showLoadingIndicator()
+//        news = interactor.fetchNewsData()
+        view?.hideLoadingIndicator()
     }
     
     

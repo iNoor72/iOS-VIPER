@@ -8,20 +8,28 @@
 import UIKit
 
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NewsViewProtocol {
+
     var presenter: NewsPresetnerProtocol?
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTableView()
-    }
-    
-    func setTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.newsCellID, bundle: nil), forCellReuseIdentifier: Constants.newsCellID)
     }
+    
+    func showLoadingIndicator() {
+        
+    }
+    
+    func hideLoadingIndicator() {
+        
+    }
+    
+    //MARK: TableView Delegate & DataSource
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3

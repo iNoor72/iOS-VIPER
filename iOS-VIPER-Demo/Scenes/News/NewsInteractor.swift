@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class NewsInteractor: NewsInteractorInputProtocol {
+    var presenter: NewsPresetnerProtocol?
+    
+    func fetchNewsData(){
+        NetworkService.shared.fetchData()
+//        presenter?.news = data
+    }
+}
