@@ -8,7 +8,6 @@
 import Foundation
 
 class NewsPresenter: NewsPresetnerProtocol {
-    
     var news : News?
     
     weak var view: NewsViewProtocol?
@@ -23,7 +22,7 @@ class NewsPresenter: NewsPresetnerProtocol {
     
     func fetchNewsData() {
         view?.showLoadingIndicator()
-//        news = interactor.fetchNewsData()
+        interactor.fetchNewsData()
         view?.hideLoadingIndicator()
     }
     

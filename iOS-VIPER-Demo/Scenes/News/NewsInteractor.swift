@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 class NewsInteractor: NewsInteractorInputProtocol {
     var presenter: NewsPresetnerProtocol?
     
     func fetchNewsData(){
-        NetworkService.shared.fetchData()
-//        presenter?.news = data
-        
+        NetworkService.shared.fetchData {[weak self] news, error in
+            self?.presenter?.news = news
+        }
     }
 }
