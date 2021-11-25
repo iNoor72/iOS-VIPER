@@ -11,6 +11,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var presenter: NewsPresetnerProtocol?
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,18 +22,20 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func showLoadingIndicator() {
-        
+        loadingIndicator.isHidden = false
+        loadingIndicator.startAnimating()
     }
     
     func hideLoadingIndicator() {
-        
+        loadingIndicator.stopAnimating()
+        loadingIndicator.isHidden = true
     }
     
     //MARK: TableView Delegate & DataSource
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return presenter?.news?.articles.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

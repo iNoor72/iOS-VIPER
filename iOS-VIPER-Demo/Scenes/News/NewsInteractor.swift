@@ -12,7 +12,10 @@ class NewsInteractor: NewsInteractorInputProtocol {
     var presenter: NewsPresetnerProtocol?
     
     func fetchNewsData(){
-        NetworkService.shared.fetchData {[weak self] news, error in
+        NetworkService.shared.fetchData {[weak self] (news: News?, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
             self?.presenter?.news = news
         }
     }
