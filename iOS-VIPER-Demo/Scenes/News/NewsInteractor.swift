@@ -21,4 +21,5 @@ class NewsInteractor: NewsInteractorInputProtocol {
             self?.news = news
         }
     }
+    
 }
