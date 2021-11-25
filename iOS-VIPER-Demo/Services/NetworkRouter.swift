@@ -42,6 +42,10 @@ enum NetworkRouter: URLRequestConvertible {
         request.method = method
         
         //Adding parameters here
+        switch self {
+        case .topHeadlines:
+            request = try URLEncoding.default.encode(request, with: parameters)
+        }
         
         return request
     }

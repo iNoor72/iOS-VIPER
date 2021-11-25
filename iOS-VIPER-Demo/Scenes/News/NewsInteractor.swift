@@ -10,6 +10,7 @@ import SwiftUI
 
 class NewsInteractor: NewsInteractorInputProtocol {
     var presenter: NewsPresetnerProtocol?
+    var news: News?
     
     func fetchNewsData(){
         NetworkService.shared.fetchData {[weak self] (news: News?, error) in
@@ -17,6 +18,7 @@ class NewsInteractor: NewsInteractorInputProtocol {
                 print(error.localizedDescription)
             }
             self?.presenter?.news = news
+            self?.news = news
         }
     }
 }

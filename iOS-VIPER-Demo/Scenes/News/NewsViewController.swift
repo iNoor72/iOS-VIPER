@@ -19,6 +19,13 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Constants.newsCellID, bundle: nil), forCellReuseIdentifier: Constants.newsCellID)
+        fetchData()
+    }
+    
+    func fetchData() {
+        showLoadingIndicator()
+        presenter?.fetchNewsData()
+        hideLoadingIndicator()
     }
     
     func showLoadingIndicator() {
@@ -30,10 +37,8 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         loadingIndicator.stopAnimating()
         loadingIndicator.isHidden = true
     }
-    
+
     //MARK: TableView Delegate & DataSource
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter?.news?.articles.count ?? 0
     }
@@ -42,8 +47,5 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.newsCellID, for: indexPath) as! NewsCell
         return cell
     }
-    
-
-
 }
 

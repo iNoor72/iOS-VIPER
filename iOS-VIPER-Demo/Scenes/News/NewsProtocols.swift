@@ -17,6 +17,7 @@ protocol NewsViewProtocol: AnyObject {
 protocol NewsPresetnerProtocol {
     var view: NewsViewProtocol? { get set }
     var news: News? { get set }
+    func fetchNewsData()
 }
 
 protocol NewsRouterProtocol {
@@ -25,7 +26,7 @@ protocol NewsRouterProtocol {
 
 protocol NewsInteractorInputProtocol {
     var presenter: NewsPresetnerProtocol? { get set }
-    func fetchNewsData() 
+    func fetchNewsData()
 }
 
 protocol NewsInteractorOutputProtocol {

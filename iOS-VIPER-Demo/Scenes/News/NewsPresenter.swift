@@ -21,9 +21,8 @@ class NewsPresenter: NewsPresetnerProtocol {
     }
     
     func fetchNewsData() {
-        view?.showLoadingIndicator()
+        //data is not set in the presenter
         interactor.fetchNewsData()
-        view?.hideLoadingIndicator()
     }
     
     

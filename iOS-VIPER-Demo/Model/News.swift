@@ -13,9 +13,9 @@ struct News: Codable {
 
 struct Article: Codable {
     var title: String
-    var description: String
+    var description: String?
     var url: String
-    var image: String
+    var image: String?
     
     enum CodingKeys: String, CodingKey {
         case image = "urlToImage"
