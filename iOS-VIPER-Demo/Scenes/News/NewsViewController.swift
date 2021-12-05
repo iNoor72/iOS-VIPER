@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NewsViewProtocol {
+class NewsViewController: UIViewController, NewsViewProtocol {
 
     var presenter: NewsPresetnerProtocol?
     
@@ -37,15 +37,9 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         loadingIndicator.stopAnimating()
         loadingIndicator.isHidden = true
     }
-
-    //MARK: TableView Delegate & DataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.news?.articles.count ?? 0
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.newsCellID, for: indexPath) as! NewsCell
-        return cell
+    func reloadData() {
+        self.tableView.reloadData()
     }
 }
 

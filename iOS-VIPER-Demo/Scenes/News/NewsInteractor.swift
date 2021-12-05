@@ -9,16 +9,18 @@ import Foundation
 import SwiftUI
 
 class NewsInteractor: NewsInteractorInputProtocol {
-    var presenter: NewsPresetnerProtocol?
+    var presenter: NewsInteractorOutputProtocol?
     var news: News?
     
     func fetchNewsData(){
         NetworkService.shared.fetchData {[weak self] (news: News?, error) in
             if let error = error {
                 print(error.localizedDescription)
+                self?.presenter?.newsNotFetched(error: error)
             }
-            self?.presenter?.news = news
-            self?.news = news
+            guard let safeNews = news else { return }
+            print("News from interactor. \(safeNews)")
+            self?.presenter?.newsFetchedSuccessfully(news: safeNews)
         }
     }
     

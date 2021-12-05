@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,41 +23,27 @@
                             <constraint firstAttribute="width" constant="72" id="tiJ-vo-jVM"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BookName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-TH-5DI">
-                        <rect key="frame" x="112" y="14" width="193" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AuthorName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXH-Kh-wvX">
-                        <rect key="frame" x="112" y="43" width="193" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PublishDate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2z-aG-2DZ">
-                        <rect key="frame" x="112" y="72" width="193" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsJ-TH-5DI">
+                        <rect key="frame" x="106" y="20" width="193" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="d2z-aG-2DZ" firstAttribute="top" secondItem="OXH-Kh-wvX" secondAttribute="bottom" constant="8" id="1CQ-AG-aoO"/>
-                    <constraint firstAttribute="trailing" secondItem="OXH-Kh-wvX" secondAttribute="trailing" id="EiQ-i9-Egw"/>
-                    <constraint firstAttribute="trailing" secondItem="FsJ-TH-5DI" secondAttribute="trailing" id="IYz-vv-YFs"/>
                     <constraint firstItem="5n3-mf-4jV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="S0F-oC-21V"/>
-                    <constraint firstItem="FsJ-TH-5DI" firstAttribute="top" secondItem="5n3-mf-4jV" secondAttribute="top" id="XCY-o1-CPV"/>
-                    <constraint firstItem="OXH-Kh-wvX" firstAttribute="leading" secondItem="5n3-mf-4jV" secondAttribute="trailing" constant="24" id="XIY-MO-WNU"/>
-                    <constraint firstAttribute="trailing" secondItem="d2z-aG-2DZ" secondAttribute="trailing" id="XOf-by-Kl0"/>
-                    <constraint firstItem="OXH-Kh-wvX" firstAttribute="top" secondItem="FsJ-TH-5DI" secondAttribute="bottom" constant="8" id="bc7-ue-ZeD"/>
-                    <constraint firstItem="FsJ-TH-5DI" firstAttribute="leading" secondItem="5n3-mf-4jV" secondAttribute="trailing" constant="24" id="eKa-RE-Q76"/>
-                    <constraint firstItem="d2z-aG-2DZ" firstAttribute="leading" secondItem="5n3-mf-4jV" secondAttribute="trailing" constant="24" id="fLf-XX-o4x"/>
+                    <constraint firstItem="FsJ-TH-5DI" firstAttribute="leading" secondItem="5n3-mf-4jV" secondAttribute="trailing" constant="18" id="aMR-qf-h5a"/>
+                    <constraint firstAttribute="trailing" secondItem="FsJ-TH-5DI" secondAttribute="trailing" constant="6" id="iVo-dN-IAe"/>
                     <constraint firstAttribute="bottom" secondItem="5n3-mf-4jV" secondAttribute="bottom" constant="14" id="nXE-Sf-2CM"/>
                     <constraint firstItem="5n3-mf-4jV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="neT-bA-sJ3"/>
+                    <constraint firstItem="FsJ-TH-5DI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="vq9-SR-TRM"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="articleImage" destination="5n3-mf-4jV" id="Bqr-6w-i6B"/>
+                <outlet property="articleTitle" destination="FsJ-TH-5DI" id="aGK-L1-FHb"/>
+            </connections>
             <point key="canvasLocation" x="132.60869565217394" y="109.15178571428571"/>
         </tableViewCell>
     </objects>
